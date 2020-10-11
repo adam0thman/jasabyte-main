@@ -8,157 +8,223 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
 
     <!-- Site Properties -->
-    <title>Jasabyte | Future, Enhanced</title>
+    <title>Jasabyte | Future, Enhanced.</title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"></script>
 
     <style type="text/css">
-        @font-face {
-            font-family: myFirstFont;
-            src: url(sansation_light.woff);
-        }
-
-        * {
-            font-family: myFirstFont;
-            padding: 0;
-            margin: 9;
-            box-sizing: border-box;
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
-            width: 100%;
-            height: 100vh;
-            background-color: rgb(32, 35, 48);
+            background-color: #FFFFFF;
+            margin-top: 2em;
         }
 
-        #logo {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            animation: fill 0.5s ease forwards 2.2s;
+        .color-grey {
+            color: #9F9D9D;
         }
 
-        h1 {
-            position: absolute;
-            top: 65%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            display: none;
+        h3.ui.header {
+            color: #686464;
         }
 
-        #letter1 {
-            stroke-dasharray: 392;
-            stroke-dashoffset: 392;
-            animation: line-anim 3s ease forwards;
+        .leftpad {
+            margin-left: 1.5em;
         }
 
-        #letter2 {
-            stroke-dasharray: 490;
-            stroke-dashoffset: 490;
-            animation: line-anim 3s ease forwards 0.3s;
+        .ui.menu .item img.logo {
+            margin-right: 1.5em;
         }
 
-        #letter3 {
-            /* S */
-            stroke-dasharray: 494;
-            stroke-dashoffset: 494;
-            animation: line-anim 2s ease forwards 0.6s;
+        .main.container {
+            margin-top: 2em;
         }
 
-        #letter4 {
-            stroke-dasharray: 490;
-            stroke-dashoffset: 490;
-            animation: line-anim 1.2s ease forwards 0.9s;
-        }
-
-        #letter5 {
-            /* B */
-            stroke-dasharray: 610;
-            stroke-dashoffset: 610;
-            animation: line-anim 2s ease forwards 1.2s;
-        }
-
-        #letter6 {
-            stroke-dasharray: 372;
-            stroke-dashoffset: 372;
-            animation: line-anim 2s ease forwards 1.5s;
-        }
-
-        #letter7 {
-            stroke-dasharray: 336;
-            stroke-dashoffset: 336;
-            animation: line-anim 2s ease forwards 1.8s;
-        }
-
-        #letter8 {
-            stroke-dasharray: 463;
-            stroke-dashoffset: 463;
-            animation: line-anim 2s ease forwards 2.1s;
-        }
-
-        @keyframes line-anim {
-            to {
-                stroke-dashoffset: 0px;
-            }
-        }
-
-        @keyframes fill {
-            from {
-                fill: transparent;
-            }
-
-            to {
-                fill: white;
-            }
+        .ui.footer.segment {
+            margin: 5em 0em 0em;
+            padding: 5em 0em;
         }
     </style>
 
 </head>
 
 <body>
-    <svg id="logo" width="777" height="114" viewBox="0 0 777 114" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <mask id="path-1-outside-1" maskUnits="userSpaceOnUse" x="0.903992" y="0.335999" width="776" height="113"
-            fill="black">
-            <rect fill="white" x="0.903992" y="0.335999" width="776" height="113" />
-            <path
-                d="M61.632 6.632V80.792C61.632 89.048 59.088 95.672 54 100.664C48.912 105.56 42.192 108.008 33.84 108.008C25.392 108.008 18.624 105.512 13.536 100.52C8.44799 95.432 5.90399 88.52 5.90399 79.784H19.008C19.104 84.68 20.352 88.664 22.752 91.736C25.248 94.808 28.944 96.344 33.84 96.344C38.736 96.344 42.384 94.904 44.784 92.024C47.184 89.048 48.384 85.304 48.384 80.792V6.632H61.632Z" />
-            <path
-                d="M161.175 84.68H117.399L109.335 107H95.5114L131.799 7.208H146.919L183.063 107H169.239L161.175 84.68ZM157.431 74.024L139.287 23.336L121.143 74.024H157.431Z" />
-            <path
-                d="M245.103 108.008C238.479 108.008 232.527 106.856 227.247 104.552C222.063 102.152 217.983 98.888 215.007 94.76C212.031 90.536 210.495 85.688 210.399 80.216H224.367C224.847 84.92 226.767 88.904 230.127 92.168C233.583 95.336 238.575 96.92 245.103 96.92C251.343 96.92 256.239 95.384 259.791 92.312C263.439 89.144 265.263 85.112 265.263 80.216C265.263 76.376 264.207 73.256 262.095 70.856C259.983 68.456 257.343 66.632 254.175 65.384C251.007 64.136 246.735 62.792 241.359 61.352C234.735 59.624 229.407 57.896 225.375 56.168C221.439 54.44 218.031 51.752 215.151 48.104C212.367 44.36 210.975 39.368 210.975 33.128C210.975 27.656 212.367 22.808 215.151 18.584C217.935 14.36 221.823 11.096 226.815 8.792C231.903 6.488 237.711 5.336 244.239 5.336C253.647 5.336 261.327 7.688 267.279 12.392C273.327 17.096 276.735 23.336 277.503 31.112H263.103C262.623 27.272 260.607 23.912 257.055 21.032C253.503 18.056 248.799 16.568 242.943 16.568C237.471 16.568 233.007 18.008 229.551 20.888C226.095 23.672 224.367 27.608 224.367 32.696C224.367 36.344 225.375 39.32 227.391 41.624C229.503 43.928 232.047 45.704 235.023 46.952C238.095 48.104 242.367 49.448 247.839 50.984C254.463 52.808 259.791 54.632 263.823 56.456C267.855 58.184 271.311 60.92 274.191 64.664C277.071 68.312 278.511 73.304 278.511 79.64C278.511 84.536 277.215 89.144 274.623 93.464C272.031 97.784 268.191 101.288 263.103 103.976C258.015 106.664 252.015 108.008 245.103 108.008Z" />
-            <path
-                d="M371.522 84.68H327.746L319.682 107H305.858L342.146 7.208H357.266L393.41 107H379.586L371.522 84.68ZM367.778 74.024L349.634 23.336L331.49 74.024H367.778Z" />
-            <path
-                d="M473.882 55.304C477.529 55.88 480.842 57.368 483.818 59.768C486.89 62.168 489.29 65.144 491.018 68.696C492.842 72.248 493.754 76.04 493.754 80.072C493.754 85.16 492.458 89.768 489.866 93.896C487.274 97.928 483.482 101.144 478.49 103.544C473.593 105.848 467.786 107 461.066 107H423.626V6.632H459.626C466.442 6.632 472.25 7.784 477.049 10.088C481.85 12.296 485.45 15.32 487.85 19.16C490.25 23 491.45 27.32 491.45 32.12C491.45 38.072 489.818 43.016 486.553 46.952C483.386 50.792 479.162 53.576 473.882 55.304ZM436.73 49.976H458.762C464.906 49.976 469.658 48.536 473.018 45.656C476.378 42.776 478.057 38.792 478.057 33.704C478.057 28.616 476.378 24.632 473.018 21.752C469.658 18.872 464.81 17.432 458.474 17.432H436.73V49.976ZM459.914 96.2C466.442 96.2 471.53 94.664 475.178 91.592C478.826 88.52 480.65 84.248 480.65 78.776C480.65 73.208 478.729 68.84 474.889 65.672C471.049 62.408 465.914 60.776 459.482 60.776H436.73V96.2H459.914Z" />
-            <path
-                d="M596.61 6.632L563.922 69.128V107H550.818V69.128L517.986 6.632H532.53L557.298 57.464L582.066 6.632H596.61Z" />
-            <path d="M686.608 6.632V17.288H659.248V107H646.144V17.288H618.64V6.632H686.608Z" />
-            <path
-                d="M730.242 17.288V50.84H766.818V61.64H730.242V96.2H771.138V107H717.138V6.488H771.138V17.288H730.242Z" />
-        </mask>
-        <path id="letter1"
-            d="M61.632 6.632V80.792C61.632 89.048 59.088 95.672 54 100.664C48.912 105.56 42.192 108.008 33.84 108.008C25.392 108.008 18.624 105.512 13.536 100.52C8.44799 95.432 5.90399 88.52 5.90399 79.784H19.008C19.104 84.68 20.352 88.664 22.752 91.736C25.248 94.808 28.944 96.344 33.84 96.344C38.736 96.344 42.384 94.904 44.784 92.024C47.184 89.048 48.384 85.304 48.384 80.792V6.632H61.632Z"
-            stroke="#FFFEFE" stroke-width="10" mask="url(#path-1-outside-1)" />
-        <path id="letter2"
-            d="M161.175 84.68H117.399L109.335 107H95.5114L131.799 7.208H146.919L183.063 107H169.239L161.175 84.68ZM157.431 74.024L139.287 23.336L121.143 74.024H157.431Z"
-            stroke="#FFFEFE" stroke-width="10" mask="url(#path-1-outside-1)" />
-        <path id="letter3"
-            d="M245.103 108.008C238.479 108.008 232.527 106.856 227.247 104.552C222.063 102.152 217.983 98.888 215.007 94.76C212.031 90.536 210.495 85.688 210.399 80.216H224.367C224.847 84.92 226.767 88.904 230.127 92.168C233.583 95.336 238.575 96.92 245.103 96.92C251.343 96.92 256.239 95.384 259.791 92.312C263.439 89.144 265.263 85.112 265.263 80.216C265.263 76.376 264.207 73.256 262.095 70.856C259.983 68.456 257.343 66.632 254.175 65.384C251.007 64.136 246.735 62.792 241.359 61.352C234.735 59.624 229.407 57.896 225.375 56.168C221.439 54.44 218.031 51.752 215.151 48.104C212.367 44.36 210.975 39.368 210.975 33.128C210.975 27.656 212.367 22.808 215.151 18.584C217.935 14.36 221.823 11.096 226.815 8.792C231.903 6.488 237.711 5.336 244.239 5.336C253.647 5.336 261.327 7.688 267.279 12.392C273.327 17.096 276.735 23.336 277.503 31.112H263.103C262.623 27.272 260.607 23.912 257.055 21.032C253.503 18.056 248.799 16.568 242.943 16.568C237.471 16.568 233.007 18.008 229.551 20.888C226.095 23.672 224.367 27.608 224.367 32.696C224.367 36.344 225.375 39.32 227.391 41.624C229.503 43.928 232.047 45.704 235.023 46.952C238.095 48.104 242.367 49.448 247.839 50.984C254.463 52.808 259.791 54.632 263.823 56.456C267.855 58.184 271.311 60.92 274.191 64.664C277.071 68.312 278.511 73.304 278.511 79.64C278.511 84.536 277.215 89.144 274.623 93.464C272.031 97.784 268.191 101.288 263.103 103.976C258.015 106.664 252.015 108.008 245.103 108.008Z"
-            stroke="#FFFEFE" stroke-width="10" mask="url(#path-1-outside-1)" />
-        <path id="letter4"
-            d="M371.522 84.68H327.746L319.682 107H305.858L342.146 7.208H357.266L393.41 107H379.586L371.522 84.68ZM367.778 74.024L349.634 23.336L331.49 74.024H367.778Z"
-            stroke="#FFFEFE" stroke-width="10" mask="url(#path-1-outside-1)" />
-        <path id="letter5"
-            d="M473.882 55.304C477.529 55.88 480.842 57.368 483.818 59.768C486.89 62.168 489.29 65.144 491.018 68.696C492.842 72.248 493.754 76.04 493.754 80.072C493.754 85.16 492.458 89.768 489.866 93.896C487.274 97.928 483.482 101.144 478.49 103.544C473.593 105.848 467.786 107 461.066 107H423.626V6.632H459.626C466.442 6.632 472.25 7.784 477.049 10.088C481.85 12.296 485.45 15.32 487.85 19.16C490.25 23 491.45 27.32 491.45 32.12C491.45 38.072 489.818 43.016 486.553 46.952C483.386 50.792 479.162 53.576 473.882 55.304ZM436.73 49.976H458.762C464.906 49.976 469.658 48.536 473.018 45.656C476.378 42.776 478.057 38.792 478.057 33.704C478.057 28.616 476.378 24.632 473.018 21.752C469.658 18.872 464.81 17.432 458.474 17.432H436.73V49.976ZM459.914 96.2C466.442 96.2 471.53 94.664 475.178 91.592C478.826 88.52 480.65 84.248 480.65 78.776C480.65 73.208 478.729 68.84 474.889 65.672C471.049 62.408 465.914 60.776 459.482 60.776H436.73V96.2H459.914Z"
-            stroke="#FFFEFE" stroke-width="10" mask="url(#path-1-outside-1)" />
-        <path id="letter6"
-            d="M596.61 6.632L563.922 69.128V107H550.818V69.128L517.986 6.632H532.53L557.298 57.464L582.066 6.632H596.61Z"
-            stroke="#FFFEFE" stroke-width="10" mask="url(#path-1-outside-1)" />
-        <path id="letter7" d="M686.608 6.632V17.288H659.248V107H646.144V17.288H618.64V6.632H686.608Z" stroke="#FFFEFE"
-            stroke-width="10" mask="url(#path-1-outside-1)" />
-        <path id="letter8"
-            d="M730.242 17.288V50.84H766.818V61.64H730.242V96.2H771.138V107H717.138V6.488H771.138V17.288H730.242Z"
-            stroke="#FFFEFE" stroke-width="10" mask="url(#path-1-outside-1)" />
-    </svg>
+    <div class="pusher">
+        <div class="full height">
+
+            <div class="article">
+                <div class="ui masthead vertical segment">
+                    <div class="ui container">
+                        <div class="introduction">
+
+                            <h1 class="ui header">
+                                Jasabyte Sdn. Bhd.
+                                <div class="sub header">
+                                    <br />Jasabyte, established 2009 in Kuala Lumpur, Malaysia, with roots of a
+                                    partnership between four technology enthusiasts, growing to providing world class
+                                    ICT services to corporate entities and government bodies, off-the-shelf and
+                                    homebrewed.
+                                </div>
+                            </h1>
+
+                            <div class="ui hidden divider"></div>
+
+                            <div class="ui right floated main menu">
+                                <a href="#" class="home popup icon item" data-tooltip="Homepage"
+                                    data-content="Homepage">
+                                    <i class="home icon"></i>
+                                </a>
+                                <a href="#services" class="popup icon item" data-tooltip="Services"
+                                    data-content="Services">
+                                    <i class="sticky note outline icon"></i>
+                                </a>
+                                <a href="#solutions" class="popup icon item" data-tooltip="Packaged Solutions"
+                                    data-content="Packaged Solutions">
+                                    <i class="archive icon"></i>
+                                </a>
+                                <a href="#contact" class="popup icon item" data-tooltip="Contact"
+                                    data-content="Contact">
+                                    <i class="phone volume icon"></i>
+                                </a>
+                            </div>
+
+                            <div class="ui download teal button">
+                                Get Company Profile (PDF)
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="main ui container">
+                    <div class="ui ignored warning message">
+                        With the pandemic that our world is going through, Jasabyte strives to maintain it's quality
+                        in delivering value-added services to all of our current and future customers. If you would
+                        like to discuss matters of COVID-19 - how it may or have affected your organization, or how
+                        you believe Jasabyte position could contribute in helping others, please reach
+                        out to <a href="mailto:corporate@jasabyte.com">corporate@jasabyte.com</a>.
+                    </div>
+
+                    <div class="ui hidden divider"></div>
+
+                    <section id="#services">
+                        <div class="introduction">
+                            <h2 class="ui dividing teal header"><i class="sticky note outline icon"></i>Core Services
+                            </h2>
+
+                            <h3 class="ui header">SAP Professional Services</h3>
+                            <p class="leftpad"><strong>SAP Implementation</strong> - Be it green or brown field,
+                                Jasabyte promises a
+                                direct to solution approach in onboarding SAP onto your organization success future.</p>
+                            <p class="leftpad"><strong>AMS & Remote Support</strong> - Sometimes its just wiser to have
+                                a grouo of focueed, experienced lot (us!) supporting your SAP matters, while you could
+                                focus on
+                                your core business strenght.</p>
+
+                            <h3 class="ui header">ICT Development</h3>
+                            <p class="leftpad"><strong>Web & Mobile</strong> - From web technologies, to apps running
+                                for Android, iOS and Huawei - we do it all. Expertly.</p>
+                            <p class="leftpad"><strong>Desktop, Network Client, Integrations</strong> - Some lives with
+                                the web while others require more specialized solution. Jasabyte has the capability to
+                                assist in matters of industrial machinery software integrations, client-server monolitic
+                                application, et cetera.</p>
+
+                            <h3 class="ui header">Security</h3>
+                            <p class="leftpad"><strong>Manual Penetration Testing</strong> - Well, we do have automated
+                                VA scans too, but hey, how can we show off our technical consultant skills at tearing
+                                down you bestest secured systems? Non-disruotive of course. Comes with full technical
+                                report too!</p>
+                            <p class="leftpad"><strong>Awareness Program</strong> - In simple words, we'll organize
+                                social
+                                engineering attacks againts your organization, run a gimicky hacking demo, and run a
+                                k1dd135, end-user friendly CTFs for awareness. Also some talks.</p>
+
+                        </div>
+                    </section>
+
+                    <div class="ui hidden divider"></div>
+
+                    <section id="#solutions">
+                        <div class="introduction">
+                            <h2 class="ui dividing teal header"><i class="archive icon"></i>Packaged Solutions</h2>
+
+                            <h3 class="ui header">SAP Self Service Password Reset</h3>
+                            <p>With a little bit of NodeJS wizardry, and the drive to reduce IT service ticket for
+                                resetting password, Jasabyte gives you a self service portal for your SAP-end-user -
+                                with nano-fraction of SAP pricing. <a href="#">More details.</a></p>
+
+                            <h3 class="ui header">No-BS, SAP SSO Activation in 2 Hours*</h3>
+                            <p>Others might take days - we do it in under 2 hours! No kidding. We offer our technical
+                                experties in activating SAP SIngle Sign-On for your ABAP and JAVA NetWeaver systems,
+                                complete with documentation guides and support references. <a href="#">Tell Me More</a>
+                            </p>
+
+                        </div>
+                    </section>
+
+                    <div class="ui hidden divider"></div>
+
+                    <div id="#contact">
+                        <div class="introduction">
+                            <h2 class="ui dividing teal header">Contact Us</h2>
+
+                            <p>Reach us via Call or WhatsApp at <a href="https://wa.me/60133609999"
+                                    target="_blank">+60133609999</a> or email <a
+                                    href="mailto:hello@jasabyte.com">hello@jasabyte.com</a>. A real human (with blood
+                                and flesh, and yes, breathing) awaits.</p>
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="ui  vertical footer segment">
+                    <div class="ui center aligned container">
+                        <div class="ui stackable grid">
+                            <div class="three wide column">
+                                <h4 class="ui header">Explore</h4>
+                                <div class="ui link list">
+                                    <a class="item" href="#">Corporate Values</a>
+                                    <a class="item" href="#">Packaged Solutions</a>
+                                    <a class="item" href="#">CSR Initiatives</a>
+                                    <a class="item" href="#">Capable Team</a>
+                                </div>
+                            </div>
+                            <div class="three wide column">
+                                <h4 class="ui header">External Links</h4>
+                                <div class="ui link list">
+                                    <a class="item" href="https://github.com/jasaby5e" target="_blank">Jasabyte
+                                        Github</a>
+                                    <a class="item" href="https://alak.cc" target="_blank">Founder's Blog</a>
+                                </div>
+                            </div>
+                            <div class="seven wide right floated column">
+                                <h4 class="ui header">Need a No-Bullshit, Straight Up ICT Services?</h4>
+                                <p> Reach out to our representatives and you'll be surprised how simple things actually
+                                    are - minus the corporate jargons and media buzz words.</p>
+                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                                    <input type="hidden" name="cmd" value="_s-xclick">
+                                    <input type="hidden" name="hosted_button_id" value="7ZAF2Q8DBZAQL">
+                                    <button type="submit" class="ui large teal button">Contact Now</button>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="ui section divider"></div>
+                        <img src="jasabyte-logo.png" class="ui centered small image">
+                        <div class="ui horizontal small divided link list">
+                            <span class="item">Jasabyte Sdn. Bhd. <small>(1352365-W)</small></span> &middot; <a
+                                class="item" href="mailto:hello@jasabyte.com">hello@jasabyte.com</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
 
 </body>
 
