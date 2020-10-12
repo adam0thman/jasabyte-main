@@ -45,6 +45,11 @@
             margin-left: 1.5em;
         }
 
+        .allpad {
+            margin-left: 1.5em;
+            margin-right: 1.5em;
+        }
+
         .ui.menu .item img.logo {
             margin-right: 1.5em;
         }
@@ -91,8 +96,8 @@
                                     data-content="Services">
                                     <i class="sticky note outline icon"></i>
                                 </a>
-                                <a href="packaged-solutions.html" class="popup icon item" data-tooltip="Packaged Solutions"
-                                    data-content="Packaged Solutions">
+                                <a href="packaged-solutions.html" class="popup icon item"
+                                    data-tooltip="Packaged Solutions" data-content="Packaged Solutions">
                                     <i class="archive icon"></i>
                                 </a>
                                 <a href="#contact" class="popup icon item" data-tooltip="Contact"
@@ -114,63 +119,44 @@
 
                     <section id="#services">
                         <div class="introduction">
-                            <h2 class="ui dividing header">Service Delivery Guideline and Chargeability Policy</h2>
-                            <h3 class="ui header">Professional Services</h3>
-                            <div class="leftpad">
-                                <p>Professional services might be delivered in-person (on-site) or remotely.
-                                    jasabyte policy on both delivery methods are the same:</p>
-                                <div class="ui bulleted list">
-                                    <div class="item">One normal working man-day equates to eight (8) hour of service
-                                        delivery - continuous or accumulated.</div>
-                                    <div class="item">A normal working hours are defined as starting from 07:30AM to
-                                        07:30PM.</div>
-                                    <div class="item">One chargeable block are measured in 30-minutes block.</div>
-                                    <div class="item">Work executed prior or beyond the normal working hours are
-                                        calculated with a 25% surcharge.</div>
-                                    <div class="item">Work executed over weekend are calculated with 50% surcharge.
-                                    </div>
-                                    <div class="item">"Weekend" period are defined as starting from 00:01 of Saturday,
-                                        to 23:59 of Sunday.</div>
-                                </div>
-                            </div>
+                            <h2 class="ui header">Packaged Solutions</h2>
+                            <p>Besides project-based or task-specific services, Jasabyte had identified some common
+                                tasks that clients always look for. We believe this can be simplified further, by
+                                pre-packaging these services for a much more straight-forward engagement. We even
+                                include the exact pricing - so you can make your decision more informed and confident.
+                            </p>
 
-                            <h3 class="ui header">Attendance and Timesheets</h3>
-                            <div class="leftpad">
-                                <p>Jasabyte encourages it's professionals to submit timesheet and/or attendance and/or
-                                    other required documentation (such as Service Entry Sheet, system logon logs, et
-                                    cetera) on weekly
-                                    basis.</p>
-                                <div class="ui bulleted list">
-                                    <div class="item">Documents can be submitted either on the Next Monday (or next
-                                        working day of the next week), or the last working day of the week.</div>
-                                    <div class="item">Last working dday of the week is defined as he last day starting
-                                        from Monday to Sunday.</div>
-                                    <div class="item">Document submission are generally be via email or any agreedd
-                                        online communicatiton channel, but may be turned into physical copy upon final
-                                        aporoval, where required.</div>
-                                </div>
-                            </div>
-
-                            <h3 class="ui header">Document Deliverables</h3>
-                                    <div class="leftpad">
-                                        <p>Jasabyte try to, as much as possible complements it's clients' documentation
-                                            change control and formatting, where possible, but has also adopted our own
-                                            standards and guidelines.</p>
-                                        <div class="ui bulleted list">
-                                            <div class="item">Documents delivered will primarily be in Portable Document
-                                                Format (PDF), unless explicitly agree for any specific project.</div>
-                                            <div class="item">Documents will be having a change control formatting
-                                                mechanism for file naming which include document versioniing, document
-                                                creator initials as well as date of change. The document naming
-                                                guideline is one of Jasabyte's standard project on-boarding templates
-                                                that will be distributed toa ll project members, upon project
-                                                initiation.</div>
-                                            <div class="item">Document deliverable will and must always have a minimum
-                                                of two verifier - one from Jasabyte's project lead and another from
-                                                appointed counterpart from client side - before it can be deemed final.
+                            <!-- Packaged Solutions Image Icons -->
+                            <br />
+                            <div class="ui special cards">
+                                <div class="card">
+                                    <div class="blurring dimmable image">
+                                        <div class="ui dimmer">
+                                            <div class="content">
+                                                <div class="center">
+                                                    <div class="ui inverted button" id="packageoneinfo" type="submit"
+                                                        href="#">More Info</div>
+                                                </div>
                                             </div>
                                         </div>
+                                        <img src="https://semantic-ui.com/images/avatar/large/elliot.jpg">
                                     </div>
+                                    <div class="content">
+                                        <a class="header" id="packageonetitle" href="#">SAP Self Service Password Reset
+                                            (using
+                                            NodeJS)</a>
+                                        <div class="meta">
+                                            <span class="date">Subscription | From MYR 16.00 user/mth</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <h3 class="ui header">xxx</h3>
+                            <div class="leftpad">
+                                <p>aa</p>
+                            </div>
 
                         </div>
                     </section>
@@ -216,7 +202,7 @@
         </div>
     </div>
 
-    <!-- Modals -->
+    <!-- Modal for CTA -->
 
     <div class="ui basic modal" id="modalcontact">
         <div class="ui icon header">
@@ -236,10 +222,124 @@
         </div>
     </div>
 
+    <!-- Modals for Packages -->
+
+    <div class="ui longer modal" id="modalpackageone">
+        <div class="header">
+            SAP Self Service Password Reset (using NodeJS)
+        </div>
+        <div class="scrolling image content">
+            <div class="ui medium image">
+                <img src="https://semantic-ui.com/images/wireframe/image.png">
+            </div>
+            <div class="description">
+                <!-- Package Description -->
+                <p>This package arise from a typical pain point from IT Service Management where SAP end-users keeps on
+                    issuing P3 Password Reset tickets that may or may not take a lot of time in resolution. A proactive
+                    approach to this would be to have Single Sign On, while others keep to the solution of Self Service
+                    Password Reset. Jasabyte privides both.</p>
+
+                <!-- Package Details -->
+                <div class="ui divider"></div>
+                <div class="ui small header teal">Package Details</div>
+                <table class="ui definition table">
+                    <tbody>
+                        <tr>
+                            <td>Engagement Model</td>
+                            <td>Subscripion-based</td>
+                            <td>Pricing determined via a yearly subscription per SAP user ID.</td>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td>MYR 16.00</td>
+                            <td>Per user Per Year </td>
+                        </tr>
+                        <tr>
+                            <td>Implementation Cost</td>
+                            <td>MYR 0.00</td>
+                            <td>Inclusive of any implementation cost.</td>
+                        </tr>
+                        <tr>
+                            <td>Implementation Time</td>
+                            <td>2 - 5 business days</td>
+                            <td>Please see the <strong>Requirement</strong> section below for further details.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Requirement -->
+                <div class="ui divider"></div>
+                <div class="ui small header teal">Requirement:</div>
+                <p>aaa.</p>
+
+                <!-- FAQ -->
+                <div class="ui divider"></div>
+                <div class="ui small header teal">Frequently Asked Questions:</div>
+                <div class="ui accordion">
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        What is a dog?
+                    </div>
+                    <div class="content">
+                        <p class="transition visible" style="display: block !important;">A dog is a type of domesticated
+                            animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many
+                            households across the world.</p>
+                    </div>
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        What kinds of dogs are there?
+                    </div>
+                    <div class="content">
+                        <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select
+                            a breed of dog that they find to be compatible with their own lifestyle and desires from a
+                            companion.</p>
+                    </div>
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        How do you acquire a dog?
+                    </div>
+                    <div class="content">
+                        <p>Three common ways for a prospective owner to acquire a dog is from pet shops, private owners,
+                            or shelters.</p>
+                        <p>A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner
+                            allows you to assess the pedigree and upbringing of your dog before choosing to take it
+                            home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not
+                            find one so readily.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui primary approve button">
+                Proceed
+                <i class="right chevron icon"></i>
+            </div>
+        </div>
+    </div>
+
     <script>
+
+        $('.special.cards .image').dimmer({
+            on: 'hover'
+        });
+
+        $('.ui.accordion').accordion();
+
         $('#ctabtn').on('click', () => {
             $('#modalcontact').modal('show');
-        })
+        });
+
+        $('#packageonetitle').on('click', (e) => {
+            e.preventDefault();
+            $('#modalpackageone').modal('show');
+        });
+
+        $('#packageoneinfo').on('click', (e) => {
+            e.preventDefault();
+            $('#modalpackageone').modal('show');
+        });
+
     </script>
 
 </body>
