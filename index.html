@@ -14,6 +14,15 @@
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"></script>
 
+    <!--Global site tag(gtag.js) - Google Analytics-->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180327717-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-180327717-1');
+    </script>
     <style type="text/css">
         html {
             scroll-behavior: smooth;
@@ -65,9 +74,9 @@
                                 Jasabyte Sdn. Bhd.
                                 <div class="sub header">
                                     <br />Jasabyte, established 2009 in Kuala Lumpur, Malaysia, with roots of a
-                                    partnership between four technology enthusiasts, growing to providing world class
-                                    ICT services to corporate entities and government bodies, off-the-shelf and
-                                    homebrewed.
+                                    partnership between four technology enthusiasts, aiming to consistently provide
+                                    world class ICT services to corporate entities and government bodies, off-the-shelf
+                                    and homebrewed.
                                 </div>
                             </h1>
 
@@ -158,8 +167,10 @@
 
                             <h3 class="ui header">No-BS, SAP SSO Activation in 2 Hours*</h3>
                             <p>Others might take days - we do it in under 2 hours! No kidding. We offer our technical
-                                experties in activating SAP SIngle Sign-On for your ABAP and JAVA NetWeaver systems,
+                                experties in activating SAP Single Sign-On for your ABAP and JAVA NetWeaver systems,
                                 complete with documentation guides and support references. <a href="#">Tell Me More</a>
+                                <small class="color-grey"><i>* See details how this 2-hour claim is
+                                        achieved.</i></small>
                             </p>
 
                         </div>
@@ -169,12 +180,12 @@
 
                     <div id="#contact">
                         <div class="introduction">
-                            <h2 class="ui dividing teal header">Contact Us</h2>
+                            <h2 class="ui dividing teal header"><i class="phone volume icon"></i>Contact Us</h2>
 
-                            <p>Reach us via Call or WhatsApp at <a href="https://wa.me/60133609999"
-                                    target="_blank">+60133609999</a> or email <a
-                                    href="mailto:hello@jasabyte.com">hello@jasabyte.com</a>. A real human (with blood
-                                and flesh, and yes, breathing) awaits.</p>
+                            <p>Reach us via <a href="tel:60133609999" target="_blank" class="">Call</a> or <a
+                                    href="https://wa.me/60133609999" target="_blank" class="">WhatsApp</a> or <a
+                                    href="mailto:hello@jasabyte.com"> email</a>. A real human <i>(with blood
+                                    and flesh, and yes, breathing)</i> awaits.</p>
 
                         </div>
                     </div>
@@ -196,20 +207,16 @@
                             <div class="three wide column">
                                 <h4 class="ui header">External Links</h4>
                                 <div class="ui link list">
-                                    <a class="item" href="https://github.com/jasaby5e" target="_blank">Jasabyte
+                                    <a class="item" href="https://github.com/jasabyte" target="_blank">Jasabyte
                                         Github</a>
                                     <a class="item" href="https://alak.cc" target="_blank">Founder's Blog</a>
                                 </div>
                             </div>
                             <div class="seven wide right floated column">
-                                <h4 class="ui header">Need a No-Bullshit, Straight Up ICT Services?</h4>
+                                <h4 class="ui header">Need a No-BS, Straight Up ICT Services?</h4>
                                 <p> Reach out to our representatives and you'll be surprised how simple things actually
                                     are - minus the corporate jargons and media buzz words.</p>
-                                <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-                                    <input type="hidden" name="cmd" value="_s-xclick">
-                                    <input type="hidden" name="hosted_button_id" value="7ZAF2Q8DBZAQL">
-                                    <button type="submit" class="ui large teal button">Contact Now</button>
-                                </form>
+                                <button class="ui large teal button" id="ctabtn">Reach Us Now</button>
                             </div>
                         </div>
                         <div class="ui section divider"></div>
@@ -225,6 +232,31 @@
         </div>
     </div>
 
+    <!-- Modals -->
+
+    <div class="ui basic modal" id="modalcontact">
+        <div class="ui icon header">
+            <h1>Reach Us Now</h1>
+            <br />
+            <form>
+                <a href="https://wa.me/60133609999" target="_blank" class="ui teal button">WhatsApp</a>
+                <a href="tel:60133609999" target="_blank" class="ui teal button">Call</a>
+                <a href="mailto:hello@jasabyte.com" target="_blank" class="ui teal button">Email</a>
+            </form>
+        </div>
+        <div class="actions">
+            <div class="ui basic cancel inverted button">
+                <i class="remove icon"></i>
+                Close
+            </div>
+        </div>
+    </div>
+
+    <script>
+        $('#ctabtn').on('click', () => {
+            $('#modalcontact').modal('show');
+        })
+    </script>
 
 </body>
 
