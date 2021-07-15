@@ -129,7 +129,7 @@
                             <!-- Packaged Solutions Image Icons -->
                             <br />
                             <div class="ui special cards">
-                                <!-- SSO -->
+                                <!-- Self Service Password Reset -->
                                 <div class="card">
                                     <div class="blurring dimmable image">
                                         <div class="ui dimmer">
@@ -140,17 +140,18 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <img src="https://semantic-ui.com/images/avatar/large/elliot.jpg">
+                                        <img src="https://semantic-ui.com/images/avatar2/large/kristy.png">
                                     </div>
                                     <div class="content">
                                         <a class="header" id="packageonetitle" href="#">SAP Self Service Password Reset
                                             (using
                                             NodeJS)</a>
                                         <div class="meta">
-                                            <span class="date">Subscription | From MYR 16.00 user/mth</span>
+                                            <span class="date">Subscription | From MYR 16.00 user/yr</span>
                                         </div>
                                     </div>
                                 </div>
+
                                 <!-- BASIS Outsourcing -->
                                 <div class="card">
                                     <div class="blurring dimmable image">
@@ -165,18 +166,35 @@
                                         <img src="https://semantic-ui.com/images/avatar/large/elliot.jpg">
                                     </div>
                                     <div class="content">
-                                        <a class="header" id="packageonetitle" href="#">SAP BASIS Service Outsourcing</a>
+                                        <a class="header" id="packageonetitle" href="#">SAP BASIS Service
+                                            Outsourcing</a>
                                         <div class="meta">
-                                            <span class="date">Package / Manday | From RM550 / manday</span>
+                                            <span class="date">Package / Manday | From RM550 / man####43day</span>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
 
-
-                            <h3 class="ui header">xxx</h3>
-                            <div class="leftpad">
-                                <p>aa</p>
+                                <!-- 2-Hour Single Sign On -->
+                                <div class="card">
+                                    <div class="blurring dimmable image">
+                                        <div class="ui dimmer">
+                                            <div class="content">
+                                                <div class="center">
+                                                    <div class="ui inverted button" id="packagethreeinfo" type="submit"
+                                                        href="#">I Want This</div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <img src="https://semantic-ui.com/images/avatar2/small/patrick.png">
+                                    </div>
+                                    <div class="content">
+                                        <a class="header" id="packagethreetitle" href="#">No-BS 4-Hour SAP Single Sign
+                                            On Implementation</a>
+                                        <div class="meta">
+                                            <span class="date">Packaged | From MYR 11500.00</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
 
                         </div>
@@ -246,6 +264,7 @@
 
     <!-- Modals for Packages -->
 
+    <!-- Modal Package One: Self Service Password Reset -->
     <div class="ui longer modal" id="modalpackageone">
         <div class="header">
             SAP Self Service Password Reset (using NodeJS)
@@ -257,9 +276,9 @@
             <div class="description">
                 <!-- Package Description -->
                 <p>This package arise from a typical pain point from IT Service Management where SAP end-users keeps on
-                    issuing P3 Password Reset tickets that may or may not take a lot of time in resolution. A proactive
+                    issuing P3 password reset tickets that may somewhat take a lot of time in resolution. A proactive
                     approach to this would be to have Single Sign On, while others keep to the solution of Self Service
-                    Password Reset. Jasabyte privides both.</p>
+                    Password Reset. Jasabyte provides both.</p>
 
                 <!-- Package Details -->
                 <div class="ui divider"></div>
@@ -268,7 +287,7 @@
                     <tbody>
                         <tr>
                             <td>Engagement Model</td>
-                            <td>Subscripion-based</td>
+                            <td>Subscription-based</td>
                             <td>Pricing determined via a yearly subscription per SAP user ID.</td>
                         </tr>
                         <tr>
@@ -292,7 +311,31 @@
                 <!-- Requirement -->
                 <div class="ui divider"></div>
                 <div class="ui small header teal">Requirement:</div>
-                <p>aaa.</p>
+                <p>To ensure the efficient implementaation of this solution, we would need to lay a few pre-conditions
+                    before any engagement starts:
+                </p>
+                <ol class="ui list">
+                    <li>An Intel-based server environment for Self Service Portal hosting. Other processoir architecture
+                        are not supported.
+                        <ol>
+                            <li>Min 4GB memory</li>
+                            <li>Min 1 CPU Core</li>
+                            <li>Min 20GB Disk Space</li>
+                        </ol>
+                    </li>
+                    <li>SSL Certificate (and its relevant certificate chain) in PEM format. This is applicable for
+                        requirement of serving the web-based Self Service Portal via HTTPS.</li>
+                    <li>Administrators / technical expert for:
+                        <ol>
+                            <li>DNS - its typical for the portal to be accessed via a internal corporate (sub)domain
+                            </li>
+                            <li>Networking - ensuring optimize routing for internal network to the portal service</li>
+                            <li>Firewall - for allowing end-user access to the portal</li>
+                        </ol>
+                    </li>
+                    <li>Key business users for User Acceptance Test</li>
+                </ol>
+
 
                 <!-- FAQ -->
                 <div class="ui divider"></div>
@@ -300,43 +343,31 @@
                 <div class="ui accordion">
                     <div class="title">
                         <i class="dropdown icon"></i>
-                        What is a dog?
+                        My corporate practice emphasizes on a 3-tier Dev, QA and PRD landscape. Does this mean I am charged
+                        tripled?
                     </div>
                     <div class="content">
-                        <p class="transition visible" style="display: block !important;">A dog is a type of domesticated
-                            animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many
-                            households across the world.</p>
+                        <p class="transition visible" style="display: block !important;">Fret not. The package
+                            will cover setup for at most 3 environment, within the same landscape. You will be to comply
+                            with your organization corporate practices and answer to auditors handsomely.</p>
                     </div>
                     <div class="title">
                         <i class="dropdown icon"></i>
-                        What kinds of dogs are there?
+                        I have multiple envrioonements, wth different user IDs. How do we calculate the user total then?
                     </div>
                     <div class="content">
-                        <p>There are many breeds of dogs. Each breed varies in size and temperament. Owners often select
-                            a breed of dog that they find to be compatible with their own lifestyle and desires from a
-                            companion.</p>
+                        <p>The user subscription are calculated from Production environment only. It is a Named User based, just
+                             like SAP. This includes Disaster Reocvery environment as well.</p>
                     </div>
                     <div class="title">
                         <i class="dropdown icon"></i>
-                        How do you acquire a dog?
+                        Does this applicable to only SAP ECC or S/4HANA application? What about BW, et cetera?
                     </div>
                     <div class="content">
-                        <p>Three common ways for a prospective owner to acquire a dog is from pet shops, private owners,
-                            or shelters.</p>
-                        <p>A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner
-                            allows you to assess the pedigree and upbringing of your dog before choosing to take it
-                            home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not
-                            find one so readily.</p>
-                    </div>
-                </div>
-
-                <br />
-                <br />
-                <div class="ui two column centered grid">
-                    <div class="column teal"></div>
-                    <div class="four column centered row">
-                        <div class="column red"></div>
-                        <div class="column red"></div>
+                        <p>Our solutiion integrates and works directly with SAP applications that rides on NetWeaver ABAP stack
+                             as well as S/4HANA ABAP Platform. Other then ECC and S/4HANA, we can also support other ABAP-based
+                              applications such as SAP BW, Front-End Fiori Server, EWM servers, et cetera.
+                        </p>
                     </div>
                 </div>
 
@@ -344,7 +375,77 @@
         </div>
         <div class="actions">
             <div class="ui primary approve button">
-                Proceed
+                Get This Solution
+                <i class="right chevron icon"></i>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Package Three: No-BS 4-Hour SAP SSO Implementation -->
+    <div class="ui longer modal" id="modalpackagethree">
+        <div class="header">
+            No-BS 4-Hour SAP Single Sign On Implementation
+        </div>
+        <div class="scrolling image content">
+            <div class="ui medium image">
+                <img src="https://semantic-ui.com/images/wireframe/image.png">
+            </div>
+            <div class="description">
+                <!-- Package Description -->
+                <p>Package description here.</p>
+
+                <!-- Package Details -->
+                <div class="ui divider"></div>
+                <div class="ui small header teal">Package Details</div>
+                <table class="ui definition table">
+                    <tbody>
+                        <tr>
+                            <td>Engagement Model</td>
+                            <td>Subscription-based</td>
+                            <td>Pricing determined via a yearly subscription per SAP user ID.</td>
+                        </tr>
+                        <tr>
+                            <td>Price</td>
+                            <td></td>
+                            <td>Per user Per Year </td>
+                        </tr>
+                        <tr>
+                            <td>Implementation Cost</td>
+                            <td></td>
+                            <td>Inclusive of any implementation cost.</td>
+                        </tr>
+                        <tr>
+                            <td>Implementation Time</td>
+                            <td></td>
+                            <td>Please see the <strong>Requirement</strong> section below for further details.</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <!-- Requirement -->
+                <div class="ui divider"></div>
+                <div class="ui small header teal">Requirement:</div>
+                <p>Requirement text here.</p>
+
+
+                <!-- FAQ -->
+                <div class="ui divider"></div>
+                <div class="ui small header teal">Frequently Asked Questions:</div>
+                <div class="ui accordion">
+                    <div class="title">
+                        <i class="dropdown icon"></i>
+                        My question here.
+                    </div>
+                    <div class="content">
+                        <p class="transition visible" style="display: block !important;">xxx</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="actions">
+            <div class="ui primary approve button">
+                Get This Solution
                 <i class="right chevron icon"></i>
             </div>
         </div>
@@ -371,6 +472,24 @@
             e.preventDefault();
             $('#modalpackageone').modal('show');
         });
+
+        $('#packagethreetitle').on('click', (e) => {
+            e.preventDefault();
+            $('#modalpackagethree').modal('show');
+        });
+
+        $('#packagethreeinfo').on('click', (e) => {
+            e.preventDefault();
+            $('#modalpackagethree').modal('show');
+        });
+
+        const params = new URLSearchParams(window.location.search);
+        if (params.get("package") == 'pwd') {
+            $('#modalpackageone').modal('show');
+        }
+        if (params.get("package") == 'sso') {
+            $('#modalpackagethree').modal('show');
+        }
 
     </script>
 
