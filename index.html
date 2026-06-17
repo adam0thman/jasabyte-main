@@ -1,264 +1,426 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-    <!-- Standard Meta -->
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-
-    <!-- Site Properties -->
-    <title>Jasabyte | Future, Enhanced.</title>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.css">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.js"></script>
-
-    <!--Global site tag(gtag.js) - Google Analytics-->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180327717-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag() { dataLayer.push(arguments); }
-        gtag('js', new Date());
-
-        gtag('config', 'UA-180327717-1');
-    </script>
-    <style type="text/css">
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            background-color: #FFFFFF;
-            margin-top: 2em;
-        }
-
-        .color-grey {
-            color: #9F9D9D;
-        }
-
-        h3.ui.header {
-            color: #686464;
-        }
-
-        .leftpad {
-            margin-left: 1.5em;
-        }
-
-        .ui.menu .item img.logo {
-            margin-right: 1.5em;
-        }
-
-        .main.container {
-            margin-top: 2em;
-        }
-
-        .ui.footer.segment {
-            margin: 5em 0em 0em;
-            padding: 5em 0em;
-        }
-    </style>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jasabyte | Enterprise ICT, SAP and Cybersecurity Services</title>
+  <meta name="description" content="Jasabyte is a Kuala Lumpur-based ICT partner providing SAP services, software development, cybersecurity and packaged enterprise solutions.">
+  <meta name="keywords" content="Jasabyte, SAP, ICT, cybersecurity, software development, Kuala Lumpur, Malaysia">
+  <meta name="theme-color" content="#0B1F3A">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230B1F3A'/%3E%3Cg fill='%230A84FF'%3E%3Ccircle cx='14' cy='16' r='3'/%3E%3Ccircle cx='22' cy='16' r='3'/%3E%3Ccircle cx='30' cy='16' r='3'/%3E%3Ccircle cx='14' cy='24' r='3'/%3E%3Ccircle cx='22' cy='24' r='3'/%3E%3Ccircle cx='30' cy='24' r='3'/%3E%3Ccircle cx='14' cy='32' r='3'/%3E%3Ccircle cx='22' cy='32' r='3'/%3E%3Ccircle cx='30' cy='32' r='3'/%3E%3Ccircle cx='38' cy='16' r='3'/%3E%3Ccircle cx='46' cy='16' r='3'/%3E%3Ccircle cx='54' cy='16' r='3'/%3E%3Ccircle cx='38' cy='24' r='3'/%3E%3Ccircle cx='46' cy='24' r='3'/%3E%3Ccircle cx='54' cy='24' r='3'/%3E%3Ccircle cx='38' cy='32' r='3'/%3E%3Ccircle cx='46' cy='32' r='3'/%3E%3Ccircle cx='54' cy='32' r='3'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
 </head>
-
 <body>
-    <div class="pusher">
-        <div class="full height">
+  <a class="skip-link" href="#main">Skip to content</a>
 
-            <div class="article">
-                <div class="ui masthead vertical segment">
-                    <div class="ui container">
-                        <div class="introduction">
+  <header class="site-header" data-header>
+    <nav class="nav container" aria-label="Primary navigation">
+      <a class="brand" href="#home" aria-label="Jasabyte home">
+        <span class="brand-mark" aria-hidden="true">J</span>
+        <span class="brand-copy">
+          <strong>JASABYTE</strong>
+          <small>technologies</small>
+        </span>
+      </a>
 
-                            <h1 class="ui header">
-                                Jasabyte Sdn. Bhd.
-                                <div class="sub header">
-                                    <br />Jasabyte, established 2009 in Kuala Lumpur, Malaysia, with roots of a
-                                    partnership between four technology enthusiasts, aiming to consistently provide
-                                    world class ICT services to corporate entities and government bodies, off-the-shelf
-                                    and homebrewed.
-                                </div>
-                            </h1>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-menu" data-menu-toggle>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span class="sr-only">Toggle navigation</span>
+      </button>
 
-                            <div class="ui hidden divider"></div>
+      <div class="nav-menu" id="primary-menu" data-menu>
+        <a href="#services">Services</a>
+        <a href="#process">Process</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
 
-                            <div class="ui right floated main menu">
-                                <a href="index.html" class="home popup icon item" data-tooltip="Homepage"
-                                    data-content="Homepage">
-                                    <i class="home icon"></i>
-                                </a>
-                                <a href="#services" class="popup icon item" data-tooltip="Services"
-                                    data-content="Services">
-                                    <i class="sticky note outline icon"></i>
-                                </a>
-                                <a href="packaged-solutions.html" class="popup icon item" data-tooltip="Packaged Solutions"
-                                    data-content="Packaged Solutions">
-                                    <i class="archive icon"></i>
-                                </a>
-                                <a href="#contact" class="popup icon item" data-tooltip="Contact"
-                                    data-content="Contact">
-                                    <i class="phone volume icon"></i>
-                                </a>
-                            </div>
+      <div class="nav-actions">
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle dark theme">
+          <span aria-hidden="true">Dark</span>
+        </button>
+        <a class="button button-small button-primary" href="mailto:hello@jasabyte.com?subject=Jasabyte%20Enquiry">Talk to us</a>
+      </div>
+    </nav>
+  </header>
 
-                            <div class="ui download teal button">
-                                Get Company Profile (PDF)
-                            </div>
+  <main id="main">
+    <section class="hero section" id="home">
+      <div class="container hero-grid">
+        <div class="hero-content reveal">
+          <p class="eyebrow">Kuala Lumpur, Malaysia · Established 2009</p>
+          <h1>Enterprise ICT, SAP and cybersecurity services for organisations that need things done properly.</h1>
+          <p class="hero-lede">
+            Jasabyte helps corporate and government clients implement SAP, build custom software,
+            strengthen security and deploy practical packaged solutions without the usual consultancy noise.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#contact">Start a conversation</a>
+            <a class="button button-secondary" href="#services">Explore services</a>
+          </div>
+          <div class="trust-strip" aria-label="Company highlights">
+            <span>Established 2009</span>
+            <span>SAP services</span>
+            <span>ICT development</span>
+            <span>Cybersecurity</span>
+            <span>Enterprise AI</span>
+          </div>
+        </div>
 
-                        </div>
-                    </div>
-                </div>
-                <div class="main ui container">
-                    <div class="ui ignored warning message">
-                        With the pandemic that our world is going through, Jasabyte strives to maintain it's quality
-                        in delivering value-added services to all of our current and future customers. If you would
-                        like to discuss matters of COVID-19 - how it may or have affected your organization, or how
-                        you believe Jasabyte position could contribute in helping others, please reach
-                        out to <a href="mailto:corporate@jasabyte.com">corporate@jasabyte.com</a>.
-                    </div>
-
-                    <div class="ui hidden divider"></div>
-
-                    <section id="#services">
-                        <div class="introduction">
-                            <h2 class="ui dividing teal header"><i class="sticky note outline icon"></i>Core Services
-                            </h2>
-
-                            <h3 class="ui header">SAP Professional Services</h3>
-                            <p class="leftpad"><strong>SAP Implementation</strong> - Be it green or brown field,
-                                Jasabyte promises a
-                                direct to solution approach in onboarding SAP onto your organization success future.</p>
-                            <p class="leftpad"><strong>AMS & Remote Support</strong> - Sometimes its just wiser to have
-                                a grouo of focueed, experienced lot (us!) supporting your SAP matters, while you could
-                                focus on
-                                your core business strenght.</p>
-
-                            <h3 class="ui header">ICT Development</h3>
-                            <p class="leftpad"><strong>Web & Mobile</strong> - From web technologies, to apps running
-                                for Android, iOS and Huawei - we do it all. Expertly.</p>
-                            <p class="leftpad"><strong>Desktop, Network Client, Integrations</strong> - Some lives with
-                                the web while others require more specialized solution. Jasabyte has the capability to
-                                assist in matters of industrial machinery software integrations, client-server monolitic
-                                application, et cetera.</p>
-
-                            <h3 class="ui header">Security</h3>
-                            <p class="leftpad"><strong>Manual Penetration Testing</strong> - Well, we do have automated
-                                VA scans too, but hey, how can we show off our technical consultant skills at tearing
-                                down you bestest secured systems? Non-disruotive of course. Comes with full technical
-                                report too!</p>
-                            <p class="leftpad"><strong>Awareness Program</strong> - In simple words, we'll organize
-                                social
-                                engineering attacks againts your organization, run a gimicky hacking demo, and run a
-                                k1dd135, end-user friendly CTFs for awareness. Also some talks.</p>
-
-                        </div>
-                    </section>
-
-                    <div class="ui hidden divider"></div>
-
-                    <section id="#solutions">
-                        <div class="introduction">
-                            <h2 class="ui dividing teal header"><i class="archive icon"></i>Packaged Solutions</h2>
-
-                            <h3 class="ui header"><a href="packaged-solutions.html?package=pwd">SAP Self Service Password Reset</a></h3>
-                            <p>With a little bit of NodeJS wizardry, and the drive to reduce IT service ticket for
-                                resetting password, Jasabyte gives you a self service portal for your SAP-end-user -
-                                with nano-fraction of SAP pricing. <a href="packaged-solutions.html?package=pwd">More details.</a></p>
-
-                            <h3 class="ui header"><a href="packaged-solutions.html?package=sso">No-BS, SAP SSO Activation in 2 Hours*</a></h3>
-                            <p>Others might take days - we do it in under 2 hours! No kidding. We offer our technical
-                                experties in activating SAP Single Sign-On for your ABAP and JAVA NetWeaver systems,
-                                complete with documentation guides and support references. <a href="packaged-solutions.html?package=sso">Tell Me More</a>
-                                <small class="color-grey"><i>* See details how this 2-hour claim is
-                                        achieved.</i></small>
-                            </p>
-                            <h4><a href="packaged-solutions.html">See more packaged solutions.</a></h4>
-
-                        </div>
-                    </section>
-
-                    <div class="ui hidden divider"></div>
-
-                    <div id="#contact">
-                        <div class="introduction">
-                            <h2 class="ui dividing teal header"><i class="phone volume icon"></i>Contact Us</h2>
-
-                            <p>Reach us via <a href="tel:60133609999" target="_blank" class="">Call</a> or <a
-                                    href="https://wa.me/60133609999" target="_blank" class="">WhatsApp</a> or <a
-                                    href="mailto:hello@jasabyte.com"> email</a>. A real human <i>(with blood
-                                    and flesh, and yes, breathing)</i> awaits.</p>
-
-                        </div>
-                    </div>
-
-
-                </div>
-                <div class="ui  vertical footer segment">
-                    <div class="ui center aligned container">
-                        <div class="ui stackable grid">
-                            <div class="three wide column">
-                                <h4 class="ui header">Explore</h4>
-                                <div class="ui link list">
-                                    <a class="item" href="#">Corporate Values</a>
-                                    <a class="item" href="#">Packaged Solutions</a>
-                                    <a class="item" href="#">CSR Initiatives</a>
-                                    <a class="item" href="#">Capable Team</a>
-                                </div>
-                            </div>
-                            <div class="three wide column">
-                                <h4 class="ui header">External Links</h4>
-                                <div class="ui link list">
-                                    <a class="item" href="https://github.com/jasabyte" target="_blank">Jasabyte
-                                        Github</a>
-                                    <a class="item" href="https://alak.cc" target="_blank">Founder's Blog</a>
-                                </div>
-                            </div>
-                            <div class="seven wide right floated column">
-                                <h4 class="ui header">Need a No-BS, Straight Up ICT Services?</h4>
-                                <p> Reach out to our representatives and you'll be surprised how simple things actually
-                                    are - minus the corporate jargons and media buzz words.</p>
-                                <button class="ui large teal button" id="ctabtn">Reach Us Now</button>
-                            </div>
-                        </div>
-                        <div class="ui section divider"></div>
-                        <img src="jasabyte-logo.png" class="ui centered small image">
-                        <div class="ui horizontal small divided link list">
-                            <span class="item">Jasabyte Sdn. Bhd. <small>(1352365-W)</small></span> &middot; <a
-                                class="item" href="mailto:hello@jasabyte.com">hello@jasabyte.com</a>
-                        </div>
-                    </div>
-                </div>
-
+        <div class="hero-visual reveal" aria-label="Technical service architecture preview">
+          <div class="system-panel">
+            <div class="panel-top">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>Core service areas</span>
             </div>
-        </div>
-    </div>
-
-    <!-- Modals -->
-
-    <div class="ui basic modal" id="modalcontact">
-        <div class="ui icon header">
-            <h1>Reach Us Now</h1>
-            <br />
-            <form>
-                <a href="https://wa.me/60133609999" target="_blank" class="ui teal button">WhatsApp</a>
-                <a href="tel:60133609999" target="_blank" class="ui teal button">Call</a>
-                <a href="mailto:hello@jasabyte.com" target="_blank" class="ui teal button">Email</a>
-            </form>
-        </div>
-        <div class="actions">
-            <div class="ui basic cancel inverted button">
-                <i class="remove icon"></i>
-                Close
+            <div class="architecture">
+              <div class="node node-sap" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'}); document.querySelector('[data-tab=sap]').click();">SAP</div>
+              <div class="node node-security" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'}); document.querySelector('[data-tab=security]').click();">Security</div>
+              <div class="node node-dev" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'}); document.querySelector('[data-tab=ict]').click();">Development</div>
+              <div class="node node-support" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'}); document.querySelector('[data-tab=sap]').click();">Support</div>
+              <div class="node node-ai" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'}); document.querySelector('[data-tab=ai]').click();">AI</div>
+              <div class="connector connector-a"></div>
+              <div class="connector connector-b"></div>
+              <div class="connector connector-c"></div>
+              <div class="connector connector-d"></div>
             </div>
+            <div class="panel-grid">
+              <div>
+                <span>Focus</span>
+                <strong>Practical delivery</strong>
+              </div>
+              <div>
+                <span>Style</span>
+                <strong>Clear, technical, direct</strong>
+              </div>
+              <div>
+                <span>Scope</span>
+                <strong>Corporate and government ICT</strong>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="services">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How we help</p>
+          <h2>Proven packages and custom solutions in the areas that matter most.</h2>
+          <p>Choose a ready-to-deploy package when speed matters. Engage us for tailored work when your needs are unique. Both options live inside the same four service domains.</p>
+        </div>
+
+        <div class="tabs reveal" data-tabs>
+          <div class="tab-list" role="tablist" aria-label="Service areas">
+            <button class="tab-button active" type="button" role="tab" aria-selected="true" aria-controls="tab-sap" id="tab-button-sap" data-tab="sap">SAP</button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="tab-ict" id="tab-button-ict" data-tab="ict">ICT Development</button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="tab-security" id="tab-button-security" data-tab="security">Cybersecurity</button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="tab-packaged" id="tab-button-packaged" data-tab="packaged">Packaged Solutions</button>
+            <button class="tab-button" type="button" role="tab" aria-selected="false" aria-controls="tab-ai" id="tab-button-ai" data-tab="ai">AI & Knowledge</button>
+          </div>
+
+          <div class="tab-panels">
+            <article class="tab-panel active" role="tabpanel" id="tab-sap" aria-labelledby="tab-button-sap" data-panel="sap">
+              <div class="service-two-col">
+                <div>
+                  <p class="eyebrow">Packaged Solutions</p>
+                  <h3>Ready-to-deploy SAP accelerators</h3>
+                  <ul class="check-list">
+                    <li>SAP Self Service Password Reset</li>
+                    <li>SAP SSO Activation in 2 Hours*</li>
+                    <li>SAP User Onboarding Kits</li>
+                  </ul>
+                  <a class="text-link" href="#contact">Explore packages</a>
+                </div>
+                <div>
+                  <p class="eyebrow">Custom Engagements</p>
+                  <h3>Tailored SAP work</h3>
+                  <ul class="check-list">
+                    <li>SAP implementation and onboarding</li>
+                    <li>AMS and remote support</li>
+                    <li>Enterprise integrations</li>
+                    <li>Complex role redesign &amp; GRC</li>
+                  </ul>
+                  <a class="text-link" href="#contact">Discuss your needs</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="tab-panel" role="tabpanel" id="tab-ict" aria-labelledby="tab-button-ict" data-panel="ict">
+              <div class="service-two-col">
+                <div>
+                  <p class="eyebrow">Packaged Solutions</p>
+                  <h3>Ready tools you can adopt quickly</h3>
+                  <ul class="check-list">
+                    <li>Internal request &amp; approval portals</li>
+                    <li>Document workflow automation</li>
+                    <li>Lightweight asset &amp; inventory trackers</li>
+                  </ul>
+                  <a class="text-link" href="#contact">See available packages</a>
+                </div>
+                <div>
+                  <p class="eyebrow">Custom Engagements</p>
+                  <h3>Built exactly for your processes</h3>
+                  <ul class="check-list">
+                    <li>Web and mobile applications</li>
+                    <li>Desktop and network client tools</li>
+                    <li>API and enterprise integrations</li>
+                    <li>Workflow automation</li>
+                  </ul>
+                  <a class="text-link" href="#contact">Start a conversation</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="tab-panel" role="tabpanel" id="tab-security" aria-labelledby="tab-button-security" data-panel="security">
+              <div class="service-two-col">
+                <div>
+                  <p class="eyebrow">Packaged Solutions</p>
+                  <h3>Security programmes with clear scope</h3>
+                  <ul class="check-list">
+                    <li>Security Awareness Training Programme</li>
+                    <li>Annual Vulnerability Assessment Package</li>
+                    <li>Phishing Simulation + Remediation</li>
+                  </ul>
+                  <a class="text-link" href="#contact">View security packages</a>
+                </div>
+                <div>
+                  <p class="eyebrow">Custom Engagements</p>
+                  <h3>In-depth, organisation-specific work</h3>
+                  <ul class="check-list">
+                    <li>Manual penetration testing</li>
+                    <li>Comprehensive vulnerability assessment</li>
+                    <li>Technical security reviews &amp; remediation</li>
+                    <li>Red team exercises</li>
+                  </ul>
+                  <a class="text-link" href="#contact">Engage our team</a>
+                </div>
+              </div>
+            </article>
+
+            
+
+            <article class="tab-panel" role="tabpanel" id="tab-ai" aria-labelledby="tab-button-ai" data-panel="ai">
+              <div>
+                <p class="eyebrow">Enterprise AI & Knowledge Management</p>
+                <h3>Grounded, local-first AI that actually understands your organisation.</h3>
+                <p>Jasabyte designs and deploys enterprise AI systems that run on your infrastructure, grounded in your own documents, processes and data — not generic public models.</p>
+              </div>
+              <ul class="check-list">
+                <li>Local / on-prem LLM deployment</li>
+                <li>Enterprise knowledge base grounding (RAG)</li>
+                <li>Harmonised Enterprise AI platforms</li>
+                <li>Secure document intelligence & retrieval</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="section section-muted" id="process">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="eyebrow">How we work</p>
+          <h2>A direct delivery path from problem to working system.</h2>
+        </div>
+
+        <div class="process-grid">
+          <article class="process-step reveal">
+            <span>01</span>
+            <h3>Understand</h3>
+            <p>Clarify the business problem, system constraints, stakeholders and success criteria.</p>
+          </article>
+          <article class="process-step reveal">
+            <span>02</span>
+            <h3>Design</h3>
+            <p>Translate requirements into a practical technical approach, delivery plan and communication rhythm.</p>
+          </article>
+          <article class="process-step reveal">
+            <span>03</span>
+            <h3>Build</h3>
+            <p>Configure, develop, integrate or test with clear checkpoints and useful documentation.</p>
+          </article>
+          <article class="process-step reveal">
+            <span>04</span>
+            <h3>Support</h3>
+            <p>Hand over, monitor, refine and support the system after launch.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container about-grid">
+        <div class="reveal">
+          <p class="eyebrow">About Jasabyte</p>
+          <h2>Technical people, practical delivery, Malaysian roots.</h2>
+          <p>
+            Jasabyte was established in 2009 in Kuala Lumpur by technology enthusiasts
+            who wanted to provide world-class ICT services to corporate entities and government bodies.
+          </p>
+          <p>
+            The revamp direction keeps that technical identity, but presents it in a cleaner way for
+            executives, IT managers and procurement teams.
+          </p>
+        </div>
+
+        <div class="values-panel reveal">
+          <h3>What the site should communicate</h3>
+          <ul class="check-list">
+            <li>Trustworthy enough for corporate and government buyers</li>
+            <li>Specific enough to show SAP, security and development capability</li>
+            <li>Fast, static and easy to host on GitHub Pages</li>
+            <li>Clear calls to action instead of long unstructured text</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted" id="faq">
+      <div class="container faq-layout">
+        <div class="section-heading reveal">
+          <p class="eyebrow">FAQ</p>
+          <h2>Common questions before engaging Jasabyte.</h2>
+        </div>
+
+        <div class="faq-list reveal">
+          <article class="faq-item">
+            <button type="button" aria-expanded="false">
+              <span>Can Jasabyte support existing SAP landscapes?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. The current positioning includes SAP implementation, AMS, remote support, SSO activation and related enterprise support work.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" aria-expanded="false">
+              <span>Do you build custom software?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Yes. Jasabyte can build web, mobile, desktop and integration tools around real operational requirements.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" aria-expanded="false">
+              <span>What cybersecurity services are available?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>The current service set includes manual penetration testing, vulnerability assessment, awareness programmes and technical reporting.</p>
+            </div>
+          </article>
+
+          <article class="faq-item">
+            <button type="button" aria-expanded="false">
+              <span>How should a new enquiry start?</span>
+              <span class="faq-icon" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer">
+              <p>Use the contact section with a short description of the system, objective, timeline and preferred contact channel.</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section" id="contact">
+      <div class="container cta-card reveal">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2>Need a reliable ICT partner?</h2>
+          <p>Tell Jasabyte what you are trying to fix, build, secure or support. Keep it short: context, objective, timeline and contact preference.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button-primary" href="mailto:hello@jasabyte.com?subject=Jasabyte%20Enquiry">Email hello@jasabyte.com</a>
+          <a class="button button-secondary" href="mailto:corporate@jasabyte.com?subject=Jasabyte%20Corporate%20Enquiry">Email corporate@jasabyte.com</a>
+          <button class="button button-ghost" type="button" data-copy-email="hello@jasabyte.com">Copy email</button>
+        </div>
+      </div>
+
+      <div class="container contact-form-wrap reveal">
+        <form class="contact-form" data-contact-form>
+          <div class="form-grid">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" autocomplete="name" required placeholder="Your name">
+            </label>
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" autocomplete="email" required placeholder="you@company.com">
+            </label>
+            <label class="full">
+              <span>Organisation</span>
+              <input type="text" name="organisation" autocomplete="organization" placeholder="Company or agency">
+            </label>
+            <label class="full">
+              <span>What do you need help with?</span>
+              <textarea name="message" rows="5" required placeholder="Briefly describe the SAP, security, software or support requirement."></textarea>
+            </label>
+          </div>
+          <div class="form-footer">
+            <p class="form-note">Static GitHub Pages form: submitting opens your email client with a prepared message.</p>
+            <button class="button button-primary" type="submit">Prepare email</button>
+          </div>
+          <p class="form-status" role="status" data-form-status></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand brand-footer" href="#home" aria-label="Jasabyte home">
+          <span class="brand-mark" aria-hidden="true">J</span>
+          <span class="brand-copy">
+            <strong>JASABYTE</strong>
+            <small>technologies</small>
+          </span>
+        </a>
+        <p>Enterprise ICT, SAP and cybersecurity services from Kuala Lumpur, Malaysia.</p>
+      </div>
+      <div>
+        <h3>Services</h3>
+        <ul>
+          <li><a href="#services" data-service-jump="sap">SAP</a></li>
+          <li><a href="#services" data-service-jump="ict">ICT Development</a></li>
+          <li><a href="#services" data-service-jump="security">Cybersecurity</a></li>
+          <li><a href="#services" data-service-jump="packaged">Packaged Solutions</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#process">Process</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>External</h3>
+        <ul>
+          <li><a href="https://github.com/adam0thman/jasabyte-main" rel="noreferrer">GitHub repo</a></li>
+          <li><a href="mailto:hello@jasabyte.com">Email</a></li>
+        </ul>
+      </div>
     </div>
+    <div class="container footer-bottom">
+      <p>&copy; <span data-year></span> Jasabyte All rights reserved.</p>
+      <p class="footnote">* The “SAP SSO Activation in 2 Hours” claim should be reviewed and linked to supporting details before production publish.</p>
+    </div>
+  </footer>
 
-    <script>
-        $('#ctabtn').on('click', () => {
-            $('#modalcontact').modal('show');
-        })
-    </script>
-
+  <script src="./script.js"></script>
 </body>
-
 </html>
