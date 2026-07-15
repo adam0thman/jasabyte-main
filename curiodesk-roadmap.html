@@ -1,0 +1,409 @@
+<title>curioDesk — Modular Platform Roadmap</title>
+<style>
+  :root {
+    --ink: #16232e;
+    --ink-soft: #3f5261;
+    --muted: #6b7d8c;
+    --line: #dbe3ec;
+    --line-soft: #e8edf3;
+    --ground: #eef2f7;
+    --surface: #ffffff;
+    --surface-2: #f6f9fc;
+    --navy: #1d2c38;
+    --blue: #2058bf;
+    --blue-soft: #e6eefb;
+    --gold: #f2a900;
+    --gold-soft: #fdf0d1;
+    /* semantic status — deliberately not the accent */
+    --live: #1f8f5f;
+    --live-soft: #e0f0e8;
+    --next: #2058bf;
+    --next-soft: #e6eefb;
+    --plan: #8a6d1f;
+    --plan-soft: #f6eccf;
+    --road: #6b7d8c;
+    --road-soft: #eef1f5;
+    --radius: 14px;
+    --radius-sm: 9px;
+    --shadow: 0 1px 2px rgba(20, 40, 60, 0.06), 0 8px 24px rgba(20, 40, 60, 0.06);
+    --maxw: 1080px;
+    --sans: "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #eaf1f8;
+      --ink-soft: #b3c2d0;
+      --muted: #8397a7;
+      --line: #2b3947;
+      --line-soft: #243039;
+      --ground: #0e161d;
+      --surface: #17222c;
+      --surface-2: #1c2833;
+      --navy: #0b131a;
+      --blue: #6aa0ff;
+      --blue-soft: #16283f;
+      --gold: #f5b731;
+      --gold-soft: #33280f;
+      --live: #52c793;
+      --live-soft: #12312300;
+      --live-soft: #123123;
+      --next: #6aa0ff;
+      --next-soft: #16283f;
+      --plan: #e2bd63;
+      --plan-soft: #2e2712;
+      --road: #8397a7;
+      --road-soft: #212c35;
+      --shadow: 0 1px 2px rgba(0,0,0,0.3), 0 10px 30px rgba(0,0,0,0.35);
+    }
+  }
+  :root[data-theme="light"] {
+    --ink:#16232e;--ink-soft:#3f5261;--muted:#6b7d8c;--line:#dbe3ec;--line-soft:#e8edf3;
+    --ground:#eef2f7;--surface:#fff;--surface-2:#f6f9fc;--navy:#1d2c38;--blue:#2058bf;--blue-soft:#e6eefb;
+    --gold:#f2a900;--gold-soft:#fdf0d1;--live:#1f8f5f;--live-soft:#e0f0e8;--next:#2058bf;--next-soft:#e6eefb;
+    --plan:#8a6d1f;--plan-soft:#f6eccf;--road:#6b7d8c;--road-soft:#eef1f5;
+    --shadow:0 1px 2px rgba(20,40,60,.06),0 8px 24px rgba(20,40,60,.06);
+  }
+  :root[data-theme="dark"] {
+    --ink:#eaf1f8;--ink-soft:#b3c2d0;--muted:#8397a7;--line:#2b3947;--line-soft:#243039;
+    --ground:#0e161d;--surface:#17222c;--surface-2:#1c2833;--navy:#0b131a;--blue:#6aa0ff;--blue-soft:#16283f;
+    --gold:#f5b731;--gold-soft:#33280f;--live:#52c793;--live-soft:#123123;--next:#6aa0ff;--next-soft:#16283f;
+    --plan:#e2bd63;--plan-soft:#2e2712;--road:#8397a7;--road-soft:#212c35;
+    --shadow:0 1px 2px rgba(0,0,0,.3),0 10px 30px rgba(0,0,0,.35);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font-family: var(--sans);
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: clamp(20px, 4vw, 52px) clamp(16px, 4vw, 40px) 72px; }
+
+  .eyebrow {
+    font-size: 12px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase;
+    color: var(--blue); margin: 0 0 12px;
+  }
+  h1 {
+    font-size: clamp(30px, 5.4vw, 52px); line-height: 1.02; letter-spacing: -0.02em;
+    font-weight: 800; margin: 0; text-wrap: balance; color: var(--ink);
+  }
+  h1 .mark { color: var(--blue); }
+  .lede { margin: 18px 0 0; max-width: 60ch; font-size: clamp(15px, 1.6vw, 18px); color: var(--ink-soft); }
+  .lede strong { color: var(--ink); font-weight: 650; }
+
+  .legend {
+    display: flex; flex-wrap: wrap; gap: 10px 20px; margin-top: 26px;
+    padding-top: 20px; border-top: 1px solid var(--line);
+    font-size: 12.5px; color: var(--muted);
+  }
+  .legend b { color: var(--ink-soft); font-weight: 650; }
+  .key { display: inline-flex; align-items: center; gap: 7px; }
+  .dot { width: 9px; height: 9px; border-radius: 3px; }
+
+  section { margin-top: clamp(30px, 5vw, 46px); }
+  .sec-head { display: flex; align-items: baseline; justify-content: space-between; gap: 16px; margin-bottom: 16px; }
+  .sec-head h2 { font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); margin: 0; }
+  .sec-head .note { font-size: 13px; color: var(--muted); }
+
+  /* module grid */
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 16px; }
+  .card {
+    position: relative; background: var(--surface); border: 1px solid var(--line);
+    border-radius: var(--radius); padding: 18px 20px 18px 22px; box-shadow: var(--shadow);
+    overflow: hidden; display: flex; flex-direction: column; gap: 10px;
+  }
+  .card::before {
+    content: ""; position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--stripe, var(--road));
+  }
+  .card.substrate { border-color: color-mix(in srgb, var(--gold) 55%, var(--line)); background: linear-gradient(180deg, var(--gold-soft), var(--surface) 62%); }
+  .card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; }
+  .glyph {
+    flex: none; width: 34px; height: 34px; border-radius: 9px; display: grid; place-items: center;
+    background: var(--navy); color: #fff; font-weight: 800; font-size: 14px; letter-spacing: -.01em;
+  }
+  .card.substrate .glyph { background: var(--gold); color: #24303a; }
+  .m-name { font-size: 16.5px; font-weight: 750; letter-spacing: -.01em; margin: 0; color: var(--ink); }
+  .m-sub { font-size: 12.5px; color: var(--muted); margin: 2px 0 0; }
+  .m-body { font-size: 13.5px; color: var(--ink-soft); margin: 0; }
+  .m-tech { font-size: 12px; color: var(--muted); margin: 0; }
+  .m-tech code { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 11.5px; color: var(--ink-soft); background: var(--surface-2); padding: 1px 5px; border-radius: 5px; }
+
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
+  .chip {
+    font-size: 11px; font-weight: 650; letter-spacing: .02em; padding: 3px 9px; border-radius: 999px;
+    display: inline-flex; align-items: center; gap: 5px; border: 1px solid transparent; white-space: nowrap;
+  }
+  .chip .tick { width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+  .chip.status-live { color: var(--live); background: var(--live-soft); }
+  .chip.status-next { color: var(--next); background: var(--next-soft); }
+  .chip.status-plan { color: var(--plan); background: var(--plan-soft); }
+  .chip.status-road { color: var(--road); background: var(--road-soft); }
+  .chip.bill { color: var(--ink-soft); background: var(--surface-2); border-color: var(--line); }
+  .chip.dep { color: var(--gold); background: var(--gold-soft); }
+
+  /* base foundation band */
+  .foundation {
+    margin-top: 18px; border: 1px solid var(--line); border-radius: var(--radius);
+    background:
+      linear-gradient(180deg, color-mix(in srgb, var(--navy) 4%, var(--surface)), var(--surface));
+    padding: 18px 22px; box-shadow: var(--shadow);
+  }
+  .foundation .fl-head { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .foundation .fl-head .lbl { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-soft); }
+  .foundation .fl-head .pill { font-size: 11px; font-weight: 650; color: var(--live); background: var(--live-soft); padding: 2px 9px; border-radius: 999px; }
+  .base-items { display: flex; flex-wrap: wrap; gap: 8px; }
+  .base-items span {
+    font-size: 12.5px; color: var(--ink-soft); background: var(--surface-2);
+    border: 1px solid var(--line-soft); border-radius: 8px; padding: 6px 11px; font-weight: 550;
+  }
+
+  .stack-rail { display: flex; align-items: center; gap: 10px; color: var(--muted); font-size: 11.5px; letter-spacing: .08em; text-transform: uppercase; font-weight: 650; margin: 24px 0 4px; }
+  .stack-rail::before, .stack-rail::after { content:""; height:1px; background: var(--line); flex: 1; }
+
+  /* build order track */
+  .track { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; counter-reset: step; }
+  .step {
+    background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius-sm);
+    padding: 14px 15px; position: relative; box-shadow: var(--shadow);
+  }
+  .step .n {
+    font-size: 11px; font-weight: 800; color: #fff; background: var(--blue);
+    width: 20px; height: 20px; border-radius: 6px; display: grid; place-items: center; margin-bottom: 9px;
+    font-variant-numeric: tabular-nums;
+  }
+  .step.foundation-step .n { background: var(--gold); color: #24303a; }
+  .step h3 { font-size: 13.5px; font-weight: 700; margin: 0 0 3px; color: var(--ink); letter-spacing: -.01em; }
+  .step p { font-size: 12px; color: var(--muted); margin: 0; }
+
+  /* bundles */
+  .bundles { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .bundle { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 20px 22px; box-shadow: var(--shadow); }
+  .bundle .b-top { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .bundle .b-swatch { width: 12px; height: 12px; border-radius: 4px; }
+  .bundle h3 { font-size: 17px; font-weight: 750; margin: 0; letter-spacing: -.01em; color: var(--ink); }
+  .bundle .b-tag { font-size: 11.5px; font-weight: 650; color: var(--muted); margin: 0 0 14px; }
+  .bundle ul { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; gap: 8px; }
+  .bundle li { font-size: 13.5px; color: var(--ink-soft); display: flex; gap: 9px; align-items: baseline; }
+  .bundle li .k { font-family: ui-monospace, Menlo, monospace; font-size: 11px; font-weight: 700; color: var(--blue); flex: none; width: 16px; }
+  .bundle .b-pitch { font-size: 12.5px; color: var(--muted); margin: 14px 0 0; padding-top: 12px; border-top: 1px solid var(--line-soft); font-style: italic; }
+
+  footer { margin-top: 44px; padding-top: 18px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; }
+  footer .brand { font-weight: 700; color: var(--ink-soft); }
+  footer .brand b { color: var(--blue); }
+
+  @media (max-width: 560px) {
+    .sec-head { flex-direction: column; gap: 4px; }
+    .card { padding: 16px 16px 16px 20px; }
+  }
+</style>
+
+<div class="wrap">
+  <header>
+    <p class="eyebrow">Product Architecture · SAP AMS Operations Platform</p>
+    <h1>curio<span class="mark">Desk</span> is a base platform.<br>The margin is in the modules.</h1>
+    <p class="lede">
+      The base handles ticketing, SLAs, onboarding and reporting — table stakes every AMS provider needs.
+      Everything past that is an <strong>add-on module</strong> sold on top. And they all stand on one thing:
+      a <strong>SAP-aware credentials vault and CMDB</strong>. Health checks, SOD scans, patch comparison and the
+      AI agent can't touch a customer system without it — so the vault isn't a peer module, it's the substrate.
+    </p>
+
+    <div class="legend">
+      <span class="key"><span class="dot" style="background:var(--live)"></span> <b>In progress</b></span>
+      <span class="key"><span class="dot" style="background:var(--next)"></span> <b>Next / foundation</b></span>
+      <span class="key"><span class="dot" style="background:var(--plan)"></span> <b>Planned</b></span>
+      <span class="key"><span class="dot" style="background:var(--road)"></span> <b>Roadmap</b></span>
+      <span class="key" style="margin-left:auto"><span class="dot" style="background:var(--gold)"></span> <b>Needs the vault</b></span>
+    </div>
+  </header>
+
+  <!-- MODULES -->
+  <section>
+    <div class="sec-head">
+      <h2>The Modules</h2>
+      <span class="note">7 add-ons · each gated by a per-tenant module entitlement</span>
+    </div>
+    <div class="grid">
+
+      <!-- a + g : substrate -->
+      <article class="card substrate" style="--stripe:var(--gold)">
+        <div class="card-top">
+          <div>
+            <p class="m-name">Credentials Vault → SAP CMDB</p>
+            <p class="m-sub">Modules a + g · the substrate</p>
+          </div>
+          <div class="glyph">a·g</div>
+        </div>
+        <p class="m-body">Landscape inventory + SAP-aware validity checking. Knows <em>USR02</em>, service keys and SNC — not a generic password box. Certificates ride here too (module g), same expiry engine.</p>
+        <p class="m-tech">Probes <code>USR02</code> validity, HANA password lifetime, BTP XSUAA secret expiry, <code>STRUST</code> PSEs. Alerts N days before a service account or cert expires.</p>
+        <div class="chips">
+          <span class="chip status-next"><span class="tick"></span>Build next</span>
+          <span class="chip bill">Customer-billed</span>
+        </div>
+      </article>
+
+      <!-- b : health -->
+      <article class="card" style="--stripe:var(--live)">
+        <div class="card-top">
+          <div>
+            <p class="m-name">Health checks + escalation</p>
+            <p class="m-sub">Module b</p>
+          </div>
+          <div class="glyph">b</div>
+        </div>
+        <p class="m-body">Proactive monitoring that turns raw CCMS into ITIL incidents & problems automatically — dedupe and flap-suppression already built. Adds a full check catalogue + multi-channel alerting.</p>
+        <p class="m-tech"><code>SM21</code> · <code>ST22</code> · <code>SM37</code> · <code>SMQ1/2</code> · <code>DB13</code> · Teams / <strong>WhatsApp</strong> alerts.</p>
+        <div class="chips">
+          <span class="chip status-live"><span class="tick"></span>~60% built</span>
+          <span class="chip bill">Customer-billed</span>
+          <span class="chip dep">Needs vault</span>
+        </div>
+      </article>
+
+      <!-- c : SOD -->
+      <article class="card" style="--stripe:var(--plan)">
+        <div class="card-top">
+          <div>
+            <p class="m-name">SOD role scanning</p>
+            <p class="m-sub">Module c</p>
+          </div>
+          <div class="glyph">c</div>
+        </div>
+        <p class="m-body">Segregation-of-Duties violation scans with a baseline ruleset plus per-customer overlays. Delta scans surface only what's new; a mitigating-controls register closes the loop.</p>
+        <p class="m-tech">Reads <code>AGR_1251</code> / <code>RSUSR*</code>. "GRC-lite" — auditors demand it, full GRC is priced out of mid-market.</p>
+        <div class="chips">
+          <span class="chip status-plan"><span class="tick"></span>Planned · revenue</span>
+          <span class="chip bill">Customer-billed</span>
+          <span class="chip dep">Needs vault</span>
+        </div>
+      </article>
+
+      <!-- e : AI -->
+      <article class="card" style="--stripe:var(--road)">
+        <div class="card-top">
+          <div>
+            <p class="m-name">AI L1 / L2 auto-support</p>
+            <p class="m-sub">Module e · the unit-economics changer</p>
+          </div>
+          <div class="glyph">e</div>
+        </div>
+        <p class="m-body">Read-only-first, in layers: L0 triage → L1 info-gathering → L2 diagnosis, where the agent logs into the customer system, reads the dump, and drafts the fix for a consultant to approve.</p>
+        <p class="m-tech">Moat = RAG over <strong>iByte's own resolved tickets</strong>. Nobody else has that history.</p>
+        <div class="chips">
+          <span class="chip status-road"><span class="tick"></span>Roadmap</span>
+          <span class="chip bill">iByte-efficiency</span>
+          <span class="chip dep">Needs vault</span>
+        </div>
+      </article>
+
+      <!-- f : patch -->
+      <article class="card" style="--stripe:var(--road)">
+        <div class="card-top">
+          <div>
+            <p class="m-name">Patch Day comparison</p>
+            <p class="m-sub">Module f</p>
+          </div>
+          <div class="glyph">f</div>
+        </div>
+        <p class="m-body">Match each month's released SAP Notes against the components in a customer's landscape → applicability + CVSS ranking. "HotNews 12345 (9.8) hits your PI system, 0 implemented."</p>
+        <p class="m-tech">Reads implemented notes (<code>CWBNTHEAD</code>) vs CMDB component versions.</p>
+        <div class="chips">
+          <span class="chip status-road"><span class="tick"></span>Roadmap</span>
+          <span class="chip bill">Customer-billed</span>
+          <span class="chip dep">Needs vault</span>
+        </div>
+      </article>
+
+      <!-- d : FUE -->
+      <article class="card" style="--stripe:var(--road)">
+        <div class="card-top">
+          <div>
+            <p class="m-name">FUE + license monitoring</p>
+            <p class="m-sub">Module d</p>
+          </div>
+          <div class="glyph">d</div>
+        </div>
+        <p class="m-body">Track S/4 Full-Use-Equivalent consumption and Digital Access against the contract. Flag inactive users to reclassify — direct cost saving — and keep customers audit-safe.</p>
+        <p class="m-tech">Reads <code>USMM</code> / SLAW measurement, classifies users, projects vs entitlement.</p>
+        <div class="chips">
+          <span class="chip status-road"><span class="tick"></span>Roadmap</span>
+          <span class="chip bill">Customer-billed</span>
+          <span class="chip dep">Needs vault</span>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <div class="stack-rail">Everything above stands on the base</div>
+
+  <!-- BASE -->
+  <div class="foundation">
+    <div class="fl-head">
+      <span class="lbl">Base platform</span>
+      <span class="pill">Live &amp; deployed</span>
+    </div>
+    <div class="base-items">
+      <span>Ticketing &amp; ITIL flow</span>
+      <span>SLA &amp; severity packages</span>
+      <span>Customer onboarding</span>
+      <span>Local attachment storage</span>
+      <span>Dashboard</span>
+      <span>Monthly reporting + PDF</span>
+    </div>
+  </div>
+
+  <!-- BUILD ORDER -->
+  <section>
+    <div class="sec-head">
+      <h2>Build Order</h2>
+      <span class="note">substrate first, then the modules that ride on it</span>
+    </div>
+    <div class="track">
+      <div class="step"><div class="n">1</div><h3>Entitlement layer</h3><p>Per-tenant module gating — small, unblocks everything.</p></div>
+      <div class="step foundation-step"><div class="n">2</div><h3>Vault → CMDB</h3><p>The substrate. Passwords + certs + expiry alerts.</p></div>
+      <div class="step"><div class="n">3</div><h3>Health (b)</h3><p>Finish the catalogue + WhatsApp/Teams alerts.</p></div>
+      <div class="step"><div class="n">4</div><h3>AI L0 / L1 (e)</h3><p>Triage + info-gathering — safe, high ROI, no logon yet.</p></div>
+      <div class="step"><div class="n">5</div><h3>SOD (c)</h3><p>The standalone revenue module with clear audit demand.</p></div>
+      <div class="step"><div class="n">6</div><h3>Patch + FUE (f·d)</h3><p>Compliance upsells once the CMDB is rich.</p></div>
+    </div>
+  </section>
+
+  <!-- BUNDLES -->
+  <section>
+    <div class="sec-head">
+      <h2>Sell Bundles, Not Checkboxes</h2>
+      <span class="note">two commercial classes: customer-billed vs iByte-efficiency</span>
+    </div>
+    <div class="bundles">
+      <div class="bundle">
+        <div class="b-top"><span class="b-swatch" style="background:var(--blue)"></span><h3>SAP Security &amp; Compliance</h3></div>
+        <p class="b-tag">Customer-billed · undercuts GRC / Onapsis</p>
+        <ul>
+          <li><span class="k">c</span><span>SOD role scanning + custom rulesets</span></li>
+          <li><span class="k">f</span><span>Patch Day applicability + CVSS ranking</span></li>
+          <li><span class="k">g</span><span>Certificate &amp; key rotation tracking</span></li>
+        </ul>
+        <p class="b-pitch">"Stay audit-safe without a six-figure GRC licence."</p>
+      </div>
+      <div class="bundle">
+        <div class="b-top"><span class="b-swatch" style="background:var(--gold)"></span><h3>Ops Automation</h3></div>
+        <p class="b-tag">Mixed · one customer-facing, one margin play</p>
+        <ul>
+          <li><span class="k">b</span><span>Proactive health monitoring + escalation</span></li>
+          <li><span class="k">e</span><span>AI L1/L2 — deflect tickets, cut consultant hours</span></li>
+          <li><span class="k">d</span><span>FUE / license right-sizing</span></li>
+        </ul>
+        <p class="b-pitch">"Catch it before the user notices — and resolve half of it without a human."</p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <span class="brand">curio<b>Desk</b> · modular platform roadmap</span>
+    <span>Base = table stakes · Modules = margin · Vault = substrate</span>
+  </footer>
+</div>
